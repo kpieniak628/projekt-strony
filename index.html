@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xxx — Biuro Projektów Budowlanych | Projekty 2D, Konstrukcje & Nadzory</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        },
+                        gold: {
+                            DEFAULT: '#C59B27',
+                            hover: '#A8821D',
+                            light: '#FFFBEB',
+                            dark: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Smooth subtle transitions */
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C59B27;
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-gold selection:text-white">
+
+    <!-- TOP HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-brand-900 text-white font-bold flex items-center justify-center text-lg rounded-lg shadow-sm group-hover:bg-gold transition-colors">
+                        xxx
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-xl tracking-tight text-brand-900 block leading-none">xxx</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-800/70 font-semibold block mt-1">Biuro Projektów Budowlanych</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION LINKS -->
+                <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase font-bold tracking-wider text-brand-800">
+                    <a href="#o-nas" class="hover:text-gold transition-colors py-2">O xxx</a>
+                    <a href="#oferta" class="hover:text-gold transition-colors py-2">Oferta</a>
+                    <a href="#proces" class="hover:text-gold transition-colors py-2">Etapy</a>
+                    <a href="#realizacje" class="hover:text-gold transition-colors py-2">Realizacje</a>
+                    <a href="#faq" class="hover:text-gold transition-colors py-2">FAQ</a>
+                    <a href="#kontakt" class="hover:text-gold transition-colors py-2">Kontakt</a>
+                </nav>
+
+                <!-- HEADER ACTION BUTTONS -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:+48000000000" class="px-4 py-2.5 text-xs font-bold text-brand-900 hover:text-gold transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-gold"></i>
+                        <span>+48 xxx xxx xxx</span>
+                    </a>
+                    <button onclick="openConsultationModal()" class="px-5 py-2.5 bg-brand-900 text-white text-xs uppercase font-bold tracking-wider rounded-lg hover:bg-gold transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Darmowa Konsultacja</span>
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU TOGGLE -->
+                <button id="mobileMenuBtn" class="lg:hidden text-brand-900 p-2 hover:text-gold focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DRAWER -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-brand-200 px-6 py-6 text-xs uppercase font-bold space-y-4 shadow-lg">
+            <a href="#o-nas" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">O xxx</a>
+            <a href="#oferta" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Oferta</a>
+            <a href="#proces" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Etapy</a>
+            <a href="#realizacje" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Realizacje</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">FAQ</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-brand-900 hover:text-gold">Kontakt</a>
+            
+            <div class="pt-4 space-y-2">
+                <button onclick="toggleMobileMenu(); openConsultationModal();" class="w-full py-3 bg-brand-900 text-white text-xs uppercase font-bold rounded-lg hover:bg-gold transition-colors">
+                    Darmowa Konsultacja
+                </button>
+                <a href="tel:+48000000000" class="block w-full py-3 text-center border border-brand-200 rounded-lg text-brand-900 text-xs font-bold">
+                    <i class="fa-solid fa-phone text-gold mr-2"></i> +48 xxx xxx xxx
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative bg-white py-16 lg:py-24 border-b border-brand-200 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- HERO LEFT TEXT CONTENT -->
+                    <div class="lg:col-span-7 space-y-8">
+                        
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-2 bg-gold-light border border-gold/30 rounded-full text-xs font-semibold text-gold-dark">
+                            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                            BIURO PROJEKTÓW BUDOWLANYCH &amp; INŻYNIERIA
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-900 tracking-tight leading-[1.12]">
+                            Nowoczesna Architektura. <br>
+                            <span class="text-gold">Solidna Konstrukcja 2D.</span>
+                        </h1>
+
+                        <p class="text-brand-800/80 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+                            Biuro projektowe <strong class="text-brand-900 font-semibold">xxx</strong> świadczy profesjonalne usługi tworzenia pełnobranżowej dokumentacji architektoniczno-budowlanej, obliczeń statycznych, adaptacji oraz nadzorów autorskich. Stawiamy na czytelność rysunku technicznego i bezbłędność inżynieryjną.
+                        </p>
+
+                        <!-- TRUST BADGES GRID -->
+                        <div class="grid sm:grid-cols-3 gap-4 pt-2">
+                            <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
+                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                    <i class="fa-solid fa-drafting-compass"></i> Rysunki CAD
+                                </div>
+                                <div class="text-xs text-brand-800/70 mt-1 font-medium">Czysta dokumentacja 2D</div>
+                            </div>
+
+                            <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
+                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                    <i class="fa-solid fa-calculator"></i> Eurokody
+                                </div>
+                                <div class="text-xs text-brand-800/70 mt-1 font-medium">Obliczenia statyczne</div>
+                            </div>
+
+                            <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
+                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                    <i class="fa-solid fa-hardhat"></i> Nadzór
+                                </div>
+                                <div class="text-xs text-brand-800/70 mt-1 font-medium">Kontrola wykonawstwa</div>
+                            </div>
+                        </div>
+
+                        <!-- HERO CTA BUTTONS (FULLY FUNCTIONAL) -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                            <a href="#oferta" class="px-8 py-4 bg-brand-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-gold transition-colors text-center shadow-md flex items-center justify-center gap-2">
+                                <span>Przeglądaj Pełną Ofertę</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                            
+                            <button onclick="openConsultationModal()" class="px-8 py-4 bg-white text-brand-900 border-2 border-brand-900 hover:border-gold hover:text-gold font-bold text-xs uppercase tracking-wider rounded-lg transition-colors text-center flex items-center justify-center gap-2">
+                                <i class="fa-regular fa-comments"></i>
+                                <span>Bezpłatna Konsultacja</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- HERO RIGHT SCHEMATIC CARD -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-brand-50 border border-brand-200 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6">
+                            
+                            <div class="flex justify-between items-center border-b border-brand-200 pb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold-dark flex items-center gap-2">
+                                    <i class="fa-solid fa-square-poll-vertical"></i> SPECYFIKACJA DOKUMENTACJI
+                                </span>
+                                <span class="text-[10px] bg-brand-200 font-bold px-2.5 py-1 rounded text-brand-900">STANDARD 2D CAD</span>
+                            </div>
+
+                            <!-- Architectural Blueprint Illustration -->
+                            <div class="bg-white border border-brand-200 rounded-xl p-5 shadow-inner">
+                                <svg viewBox="0 0 340 210" class="w-full h-auto text-brand-900">
+                                    <!-- Grid lines -->
+                                    <line x1="20" y1="20" x2="320" y2="20" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+                                    <line x1="20" y1="190" x2="320" y2="190" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+                                    <line x1="30" y1="10" x2="30" y2="200" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+                                    <line x1="310" y1="10" x2="310" y2="200" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+
+                                    <!-- Main outer walls -->
+                                    <rect x="40" y="35" width="260" height="140" fill="none" stroke="#0F172A" stroke-width="3"/>
+                                    <rect x="48" y="43" width="244" height="124" fill="none" stroke="#64748B" stroke-width="1.5"/>
+
+                                    <!-- Inner Partition walls -->
+                                    <line x1="150" y1="43" x2="150" y2="167" stroke="#C59B27" stroke-width="2.5" stroke-dasharray="5 2"/>
+                                    <line x1="150" y1="110" x2="292" y2="110" stroke="#C59B27" stroke-width="2.5"/>
+
+                                    <!-- Door & Window Indication -->
+                                    <line x1="80" y1="35" x2="110" y2="35" stroke="#FFF" stroke-width="4"/>
+                                    <line x1="80" y1="35" x2="110" y2="35" stroke="#C59B27" stroke-width="2"/>
+
+                                    <!-- Technical Annotations -->
+                                    <text x="70" y="85" font-size="10" font-family="Plus Jakarta Sans" font-weight="bold" fill="#0F172A">STREFA POKOJU</text>
+                                    <text x="70" y="100" font-size="9" font-family="Plus Jakarta Sans" fill="#64748B">A: 24.5 m²</text>
+
+                                    <text x="170" y="80" font-size="10" font-family="Plus Jakarta Sans" font-weight="bold" fill="#0F172A">GABINET / KUCHNIA</text>
+                                    <text x="170" y="95" font-size="9" font-family="Plus Jakarta Sans" fill="#64748B">A: 18.2 m²</text>
+
+                                    <text x="170" y="140" font-size="10" font-family="Plus Jakarta Sans" font-weight="bold" fill="#0F172A">KOMUNIKACJA</text>
+                                    <text x="170" y="155" font-size="9" font-family="Plus Jakarta Sans" fill="#64748B">A: 12.0 m²</text>
+                                </svg>
+                            </div>
+
+                            <!-- Sheet Info Stamp -->
+                            <div class="space-y-2 text-xs font-medium text-brand-800">
+                                <div class="flex justify-between border-b border-brand-200 pb-2">
+                                    <span class="text-brand-800/60 uppercase">Biuro Opracowania:</span>
+                                    <span class="font-bold text-brand-900">xxx Biuro Projektów</span>
+                                </div>
+                                <div class="flex justify-between border-b border-brand-200 pb-2">
+                                    <span class="text-brand-800/60 uppercase">Format Dokumentów:</span>
+                                    <span class="font-bold text-brand-900">PDF / DWG / Wydruki Papierowe</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-brand-800/60 uppercase">Standard Wykonania:</span>
+                                    <span class="font-bold text-gold-dark">Eurokody &amp; Prawo Budowlane</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: O NAS (O xxx) -->
+        <section id="o-nas" class="py-20 bg-brand-50 border-b border-brand-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-4">
+                        <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[O BIURZE PROJEKTOWYM]</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">
+                            Dlaczego Inwestorzy Wybierają Biuro xxx?
+                        </h2>
+                        <div class="w-16 h-1 bg-gold rounded-full"></div>
+                        <p class="text-brand-800/80 text-sm sm:text-base leading-relaxed pt-2 font-normal">
+                            Biuro projektów budowlanych <strong class="text-brand-900">xxx</strong> powstało w odpowiedzi na potrzebę rynku na rzetelną, jednoznaczną i bezbłędną dokumentację wykonawczą.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                        
+                        <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
+                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-brand-900">Niezawodność i Statyka</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Każdy element nośny budowli – od stóp fundamentowych po strop i więźbę – poparty jest rzetelnymi obliczeniami inżynieryjnymi.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
+                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-brand-900">Czystość Rysunku CAD 2D</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Tworzymy rysunki bez niedomówień. Wykonawca na budowie otrzymuje pełne wymiarowanie, zestawienia stali oraz czytelne przekroje.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
+                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-brand-900">Terminowość Prac</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Szanujemy czas inwestora. Harmoniczne etapy opracowywania dokumentacji gwarantują odbiór projektu w uzgodnionym terminie.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
+                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-brand-900">Nadzór nad Realizacją</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Oferujemy obecność inżyniera na placu budowy podczas kluczowych etapów, takich jak kontrola zbrojenia przed betonowaniem.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: OFERTA (CARDS INSPIRED BY PRACOWNIAZACISZE.PL/OFERTA) -->
+        <section id="oferta" class="py-20 bg-white border-b border-brand-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[ZAKRES USŁUG PROJEKTOWYCH]</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Kompleksowa Oferta Biura xxx</h2>
+                    <p class="text-brand-800/70 text-sm">
+                        Poznaj główne obszary naszej specjalizacji. Każdy projekt dopasowujemy indywidualnie do potrzeb inwestycji.
+                    </p>
+                </div>
+
+                <!-- 4 MAIN SERVICE CARDS WITH WORKING ACTION BUTTONS -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- SERVICE CARD 1 -->
+                    <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-900">Projekty Budynków Mieszkalnych</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Indywidualne i powtarzalne projekty domów jednorodzinnych, bliźniaków oraz zabudowy szeregowej.
+                            </p>
+                            
+                            <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rzuty kondygnacji CAD 2D</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Przekroje architektoniczne</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Zestawienia stolarki okiennej</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Bilans powierzchni użytkowej</li>
+                            </ul>
+                        </div>
+
+                        <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
+                        <button onclick="scrollToService('mieszkalne')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            <span>Zapytaj o tę usługę</span>
+                            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- SERVICE CARD 2 -->
+                    <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-hammer"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-900">Adaptacje i Przebudowy</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Projekty przebudowy, nadbudowy, rozbudowy istniejących obiektów oraz zmiany sposobu użytkowania.
+                            </p>
+
+                            <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Projekty wyburzeń i otworów</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Nadproża i podciągi stalowe</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Adaptacje poddaszy użytkowych</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Weryfikacja stanu konstrukcji</li>
+                            </ul>
+                        </div>
+
+                        <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
+                        <button onclick="scrollToService('adaptacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            <span>Zapytaj o tę usługę</span>
+                            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- SERVICE CARD 3 -->
+                    <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-900">Projekty Konstrukcyjne</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Wykonawcze rysunki konstrukcyjne żelbetu, stali i drewna oraz pełne obliczenia statyczne wg Eurokodów.
+                            </p>
+
+                            <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rysunki zbrojeniowe płyt i belek</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Zestawienie stali zbrojeniowej</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Konstrukcje dachu / więźba</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Fundamentowanie i palaż</li>
+                            </ul>
+                        </div>
+
+                        <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
+                        <button onclick="scrollToService('konstrukcje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            <span>Zapytaj o tę usługę</span>
+                            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- SERVICE CARD 4 -->
+                    <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-900">Inwentaryzacje &amp; Nadzór</h3>
+                            <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                                Dokładne pomiary obiektów z natury do formatu DWG oraz kontrolne wizyty inżynierskie na budowie.
+                            </p>
+
+                            <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Pomiary laserowe budynków</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rysunki stanu istniejącego 2D</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Kontrola montażu zbrojenia</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Odbiory elementów nośnych</li>
+                            </ul>
+                        </div>
+
+                        <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
+                        <button onclick="scrollToService('inwentaryzacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                            <span>Zapytaj o tę usługę</span>
+                            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: ETAPY WSPÓŁPRACY -->
+        <section id="proces" class="py-20 bg-brand-50 border-b border-brand-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[KROK PO KROKU]</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Przebieg Pracy w Biurze xxx</h2>
+                    <p class="text-brand-800/70 text-sm">
+                        Przejrzysty i uporządkowany proces współpracy od pierwszego zapytania po przekazanie dokumentacji.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
+                        <div class="w-10 h-10 bg-gold text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                            01
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-900">Konsultacja i Pomiary</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                            Omówienie założeń z Inwestorem, analiza działki lub wykonanie inwentaryzacji pomiarowej z natury.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
+                        <div class="w-10 h-10 bg-brand-900 text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                            02
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-900">Koncepcja CAD 2D</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                            Opracowanie wstępnych rzutów funkcjonalnych w skali i dopracowanie wymiarów pomieszczeń z Inwestorem.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
+                        <div class="w-10 h-10 bg-brand-900 text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                            03
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-900">Statyka &amp; Rysunki</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                            Wykonanie obliczeń konstrukcyjnych, wymiarowanie zbrojenia oraz sporządzenie przekrojów i detali.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
+                        <div class="w-10 h-10 bg-gold text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                            04
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-900">Odbiór Dokumentacji</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
+                            Przekazanie skompletowanych projektów technicznych w wersji cyfrowej (PDF/DWG) i drukowanej.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: REALIZACJE (FILTERABLE PORTFOLIO WITH WORKING MODAL) -->
+        <section id="realizacje" class="py-20 bg-white border-b border-brand-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block mb-1">[PORTFOLIO OPRACOWAŃ]</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Wybrane Projekty Biura xxx</h2>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 text-xs font-bold uppercase">
+                        <button onclick="filterPortfolio('all')" class="port-btn active px-4 py-2.5 bg-brand-900 text-white rounded-lg shadow-sm" data-category="all">Wszystkie</button>
+                        <button onclick="filterPortfolio('mieszkalne')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="mieszkalne">Mieszkalne</button>
+                        <button onclick="filterPortfolio('uslugowe')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="uslugowe">Usługowe</button>
+                        <button onclick="filterPortfolio('adaptacje')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="adaptacje">Adaptacje</button>
+                    </div>
+                </div>
+
+                <!-- PORTFOLIO GRID -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
+                    
+                    <!-- ITEM 1 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="mieszkalne">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-01</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 1</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 1</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 195 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 1', 'Opis projektu nr 1', '195 m²', 'Żelbet &amp; Pustak Ceramiczny', 'Budownictwo Mieszkalne')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="uslugowe">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-02</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">STATYKA</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 2</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 2</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 650 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 2', 'Opis projektu nr 2', '650 m²', 'Konstrukcja Stalowa', 'Obiekty Usługowe')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="adaptacje">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-03</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">INWENTARYZACJA</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 3</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 3</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 280 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 3', 'Opis projektu nr 3', '280 m²', 'Konstrukcja Tradycyjna Murowana', 'Adaptacje')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="mieszkalne">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-04</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 4</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 4</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 260 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 4', 'Opis projektu nr 4', '260 m²', 'Silikat &amp; Żelbet', 'Budownictwo Mieszkalne')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="adaptacje">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-05</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">PRZEBUDOWA</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 5</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 5</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 110 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 5', 'Opis projektu nr 5', '110 m²', 'Profil Stalowy HEB', 'Adaptacje')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6 -->
+                    <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="uslugowe">
+                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                            <span>PROJEKT #2026-06</span>
+                            <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-900">Projekt nr 6</h3>
+                        <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 6</p>
+                        <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
+                            <span class="font-semibold text-brand-800">POW: 310 m²</span>
+                            <button onclick="openProjectModal('Projekt nr 6', 'Opis projektu nr 6', '310 m²', 'Szkło, Stal &amp; Gazobeton', 'Obiekty Usługowe')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                                <span>Karta Techniczna</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: FAQ ACCORDION -->
+        <section id="faq" class="py-20 bg-brand-50 border-b border-brand-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-12 space-y-3">
+                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[FAQ]</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Najczęstsze Pytania Inwestorów</h2>
+                </div>
+
+                <div class="space-y-4">
+                    
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq1')">
+                        <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
+                            <span>W jakich formatach otrzymam gotowy projekt od Biura xxx?</span>
+                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq1-icon"></i>
+                        </div>
+                        <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq1-text">
+                            Projekt przekazujemy w pełnej wersji cyfrowej (pliki PDF zoptymalizowane pod druk oraz pliki wektorowe CAD DWG/DXF), a także na życzenie w formie oprawionych drukowanych egzemplarzy papierowych.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq2')">
+                        <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
+                            <span>Czy biuro xxx wykonuje projekty konstrukcji i przeliczenia statyczne?</span>
+                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq2-icon"></i>
+                        </div>
+                        <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq2-text">
+                            Tak. Konstrukcja i obliczenia statyczne (strope żelbetowe, nadproża, podciągi, dach) stanowią naszą kluczową specjalizację. Wszystkie wyliczenia wykonujemy zgodnie z aktualnymi Eurokodami.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq3')">
+                        <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
+                            <span>Na czym polega nadzór autorski inżyniera na placu budowy?</span>
+                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq3-icon"></i>
+                        </div>
+                        <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq3-text">
+                            Nadzór autorski polega na kontrolnych przyjazdach inżyniera projektanta na budowę przed kluczowymi pracami (np. przed betonowaniem stropu). Weryfikujemy układ zbrojenia i zgodność wykonawstwa z dokumentacją.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq4')">
+                        <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
+                            <span>Jakie dokumenty są potrzebne do wyceny projektu?</span>
+                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq4-icon"></i>
+                        </div>
+                        <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq4-text">
+                            Do bezpłatnej wyceny wstępnej wystarczą podstawowe informacje: metraż planowanego obiektu, preferowana funkcja oraz lokalizacja. W przypadku adaptacji lub inwentaryzacji przydatne będą zdjęcia stanu obecnego.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKCJA: KONTAKT -->
+        <section id="kontakt" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- LEFT COLUMN: DIRECT CONTACT DETAILS -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block mb-1">[FORMULARZ &amp; DANE]</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Skontaktuj się z xxx</h2>
+                            <p class="text-brand-800/70 text-sm mt-3 leading-relaxed">
+                                Masz pytania dotyczące projektu lub inwentaryzacji? Zadzwoni do nas bezpośrednio lub wypełnij formularz kontaktowy.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 text-xs font-semibold">
+                            
+                            <a href="tel:+48000000000" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-gold transition-colors space-y-1">
+                                <span class="text-brand-800/60 uppercase text-[10px] block">BEZPOŚREDNI TELEFON DO BIURA:</span>
+                                <span class="text-lg font-bold text-brand-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-phone text-gold"></i> +48 xxx xxx xxx
+                                </span>
+                            </a>
+
+                            <a href="mailto:kontakt@xxx.pl" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-gold transition-colors space-y-1">
+                                <span class="text-brand-800/60 uppercase text-[10px] block">ADRES POCZTY E-MAIL:</span>
+                                <span class="text-base font-bold text-brand-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-gold"></i> kontakt@xxx.pl
+                                </span>
+                            </a>
+
+                            <div class="p-5 bg-brand-50 border border-brand-200 rounded-xl space-y-1">
+                                <span class="text-brand-800/60 uppercase text-[10px] block">GODZINY PRACY BIURA xxx:</span>
+                                <span class="text-sm font-bold text-brand-900 flex items-center gap-2">
+                                    <i class="fa-regular fa-clock text-gold"></i> Poniedziałek – Piątek: 08:00 – 17:00
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: INTERACTIVE ENQUIRY FORM -->
+                    <div class="lg:col-span-7 bg-brand-50 border border-brand-200 rounded-2xl p-6 sm:p-8 shadow-md">
+                        
+                        <div class="border-b border-brand-200 pb-4 mb-6">
+                            <h3 class="text-2xl font-bold text-brand-900">Formularz Zapytania Ofertowego</h3>
+                            <p class="text-xs text-brand-800/70 mt-1">Wypełnij formularz – odpowiemy w ciągu 24 godzin.</p>
+                        </div>
+
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs font-semibold">
+                            
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-brand-900 mb-1">Imię i Nazwisko / Firma *</label>
+                                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-brand-900 mb-1">Numer Telefonu *</label>
+                                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-brand-900 mb-1">Adres E-mail *</label>
+                                    <input type="email" required placeholder="jan@domena.pl" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-brand-900 mb-1">Wybrana Usługa</label>
+                                    <select id="uslugaSelect" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                        <option value="mieszkalne">Projekty Budynków Mieszkalnych</option>
+                                        <option value="adaptacje">Adaptacje i Przebudowy</option>
+                                        <option value="konstrukcje">Projekty Konstrukcyjne i Statyka</option>
+                                        <option value="inwentaryzacje">Inwentaryzacja CAD / Nadzór</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-brand-900 mb-1">Opis Zamierzenia Budowlanego *</label>
+                                <textarea required rows="4" placeholder="Podaj lokalizację, powierzchnię w m² oraz krótki opis inwestycji..." class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors"></textarea>
+                            </div>
+
+                            <!-- FILE ATTACHMENT WITH PREVIEW -->
+                            <div>
+                                <label class="block text-brand-900 mb-1">Plik / Rzut Działki / Zdjęcia (Opcjonalnie)</label>
+                                <div class="border border-dashed border-brand-200 bg-white rounded-lg p-4 text-center cursor-pointer hover:border-gold transition-colors">
+                                    <input type="file" id="contactFileInput" class="hidden" onchange="handleFileChange(this, 'filePreviewText')">
+                                    <label for="contactFileInput" class="cursor-pointer text-xs text-brand-800/70 flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-paperclip text-gold"></i>
+                                        <span id="filePreviewText">Kliknij, aby dołączyć plik (PDF, DWG, JPG - max 15MB)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-brand-900 text-white font-bold uppercase text-xs rounded-lg hover:bg-gold transition-colors shadow-md tracking-wider">
+                                Wyślij Zapytanie do Biura xxx &rarr;
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-900 text-white py-12 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-brand-800">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gold text-white font-bold flex items-center justify-center text-base rounded-lg">
+                        xxx
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-lg text-white">xxx</div>
+                        <div class="text-[10px] uppercase text-brand-200/60 font-semibold tracking-wider">Biuro Projektów Budowlanych</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-6 text-xs uppercase font-bold text-brand-200/80">
+                    <a href="#o-nas" class="hover:text-gold transition-colors">O xxx</a>
+                    <a href="#oferta" class="hover:text-gold transition-colors">Oferta</a>
+                    <a href="#proces" class="hover:text-gold transition-colors">Etapy</a>
+                    <a href="#realizacje" class="hover:text-gold transition-colors">Realizacje</a>
+                    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+                    <a href="#kontakt" class="hover:text-gold transition-colors">Kontakt</a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-brand-200/60 font-medium gap-3">
+                <div>© 2026 xxx Biuro Projektów Budowlanych. Wszystkie prawa zastrzeżone.</div>
+                <div>STANDARD CAD 2D &amp; EUROKODY</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONSULTATION MODAL -->
+    <div id="consultationModal" class="fixed inset-0 z-50 hidden bg-brand-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white max-w-lg w-full rounded-2xl p-6 sm:p-8 shadow-2xl space-y-5">
+            <div class="flex justify-between items-center border-b border-brand-200 pb-4">
+                <h3 class="text-xl font-bold text-brand-900">Bezpłatna Konsultacja Inżynieryjna</h3>
+                <button onclick="closeModal('consultationModal')" class="text-brand-800/60 hover:text-brand-900 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-brand-800/70 leading-relaxed">
+                Wpisz swój numer telefonu oraz preferowaną godzinę rozmowy. Inżynier biura **xxx** oddzwoni i przeanalizuje Twoje zapytanie.
+            </p>
+
+            <form onsubmit="handleConsultationSubmit(event)" class="space-y-4 text-xs font-semibold">
+                <div>
+                    <label class="block text-brand-900 mb-1">Imię i Nazwisko *</label>
+                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-brand-900 mb-1">Numer Telefonu *</label>
+                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-brand-900 mb-1">Temat Konsultacji</label>
+                    <select class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                        <option>Projekt Budynku Mieszkalnego</option>
+                        <option>Przebudowa / Wyburzenie Ściany</option>
+                        <option>Obliczenia Konstrukcyjne / Statyka</option>
+                        <option>Inwentaryzacja Obiektu</option>
+                    </select>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-2">
+                    <button type="button" onclick="closeModal('consultationModal')" class="px-5 py-3 border border-brand-200 rounded-lg text-brand-900 font-bold">Anuluj</button>
+                    <button type="submit" class="px-6 py-3 bg-brand-900 text-white rounded-lg font-bold uppercase hover:bg-gold transition-colors">Zamów Rozmowę</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PROJECT SPECIFICATION MODAL -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden bg-brand-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white max-w-xl w-full rounded-2xl p-6 sm:p-8 shadow-2xl space-y-5">
+            <div class="flex justify-between items-center border-b border-brand-200 pb-4">
+                <span class="text-xs font-bold text-gold-dark uppercase tracking-wider">[KARTA SPECYFIKACJI PROJECTU]</span>
+                <button onclick="closeModal('projectModal')" class="text-brand-800/60 hover:text-brand-900 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <h3 class="text-2xl font-bold text-brand-900" id="modalTitle">Tytuł Projektu</h3>
+            <p class="text-xs text-brand-800/70 leading-relaxed" id="modalDesc">Opis...</p>
+
+            <div class="grid grid-cols-2 gap-4 py-4 border-y border-brand-200 text-xs">
+                <div>
+                    <span class="text-brand-800/60 uppercase block text-[10px]">Powierzchnia:</span>
+                    <span class="text-brand-900 font-bold" id="modalArea">--- m²</span>
+                </div>
+                <div>
+                    <span class="text-brand-800/60 uppercase block text-[10px]">Technologia:</span>
+                    <span class="text-brand-900 font-bold" id="modalTech">Żelbet / Murowana</span>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-3 pt-2">
+                <button onclick="closeModal('projectModal')" class="px-5 py-2.5 border border-brand-200 rounded-lg text-brand-900 text-xs font-bold">Zamknij</button>
+                <button onclick="closeModal('projectModal'); scrollToService('mieszkalne');" class="px-6 py-2.5 bg-brand-900 text-white text-xs font-bold uppercase rounded-lg hover:bg-gold transition-colors">Zapytaj o Podobny Projekt</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-900 text-white p-5 rounded-xl shadow-2xl text-xs max-w-xs flex items-center gap-3 border border-gold">
+        <i class="fa-solid fa-circle-check text-gold text-2xl"></i>
+        <span>Dziękujemy! Formularz został wysłany. Biuro xxx skontaktuje się z Tobą.</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Mobile Menu Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+
+        // Smooth Scroll to Contact & Auto-Select Service Dropdown
+        function scrollToService(serviceValue) {
+            const select = document.getElementById('uslugaSelect');
+            if (select) {
+                select.value = serviceValue;
+                // Add highlight ring to visual feedback
+                select.classList.add('ring-2', 'ring-gold');
+                setTimeout(() => select.classList.remove('ring-2', 'ring-gold'), 2000);
+            }
+            
+            const contactSection = document.getElementById('kontakt');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Filter Portfolio Cards
+        function filterPortfolio(category) {
+            const cards = document.querySelectorAll('.port-card');
+            const btns = document.querySelectorAll('.port-btn');
+
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('bg-brand-900', 'text-white');
+                    btn.classList.remove('bg-brand-50', 'text-brand-900');
+                } else {
+                    btn.classList.remove('bg-brand-900', 'text-white');
+                    btn.classList.add('bg-brand-50', 'text-brand-900');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-cat') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Controls
+        function openConsultationModal() {
+            document.getElementById('consultationModal').classList.remove('hidden');
+        }
+
+        function openProjectModal(title, desc, area, tech, cat) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalArea').innerText = area;
+            document.getElementById('modalTech').innerText = tech;
+            document.getElementById('projectModal').classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(id) {
+            const text = document.getElementById(`${id}-text`);
+            const icon = document.getElementById(`${id}-icon`);
+            
+            if (text.classList.contains('hidden')) {
+                text.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                text.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // File Attachment Label Handler
+        function handleFileChange(input, previewId) {
+            const label = document.getElementById(previewId);
+            if (input.files && input.files[0]) {
+                label.innerText = `Wybrano: ${input.files[0].name}`;
+            }
+        }
+
+        // Form Submit Actions
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast();
+            e.target.reset();
+            document.getElementById('filePreviewText').innerText = 'Kliknij, aby dołączyć plik (PDF, DWG, JPG - max 15MB)';
+        }
+
+        function handleConsultationSubmit(e) {
+            e.preventDefault();
+            closeModal('consultationModal');
+            showToast();
+            e.target.reset();
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4500);
+        }
+    </script>
+</body>
+</html>

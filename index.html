@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WERTOR — USŁUGI INŻYNIERYJNO-BUDOWLANE | Projekty 2D, Konstrukcje &amp; Nadzory</title>
+    <title>WERTOR — Biuro Projektów Budowlanych | Projekty 2D, Konstrukcje &amp; Nadzory</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,11 +19,11 @@
                             800: '#1E293B',
                             900: '#0F172A',
                         },
-                        gold: {
-                            DEFAULT: '#C59B27',
-                            hover: '#A8821D',
-                            light: '#FFFBEB',
-                            dark: '#D97706'
+                        skybrand: {
+                            DEFAULT: '#0EA5E9',
+                            hover: '#0284C7',
+                            light: '#F0F9FF',
+                            dark: '#0369A1'
                         }
                     },
                     fontFamily: {
@@ -64,11 +64,11 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #C59B27;
+            background: #0EA5E9;
         }
     </style>
 </head>
-<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-gold selection:text-white">
+<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-sky-500 selection:text-white">
 
     <!-- TOP HEADER / NAVIGATION -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-200 shadow-sm">
@@ -77,41 +77,41 @@
                 
                 <!-- BRAND LOGO -->
                 <a href="#hero" class="flex items-center gap-3 group shrink-0">
-                    <div class="w-10 h-10 bg-brand-900 text-gold rounded-xl shadow-sm group-hover:bg-gold group-hover:text-brand-900 transition-all flex items-center justify-center border border-brand-800/20">
+                    <div class="w-10 h-10 bg-brand-900 text-sky-400 rounded-xl shadow-sm group-hover:bg-sky-500 group-hover:text-white transition-all flex items-center justify-center border border-brand-800/20">
                         <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 6l4.5 12L12 9l4.5 9L21 6"/>
                         </svg>
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-brand-900 block leading-none group-hover:text-gold transition-colors">WERTOR</span>
-                        <span class="text-[9px] sm:text-[10.5px] uppercase tracking-wider text-brand-800/70 font-bold block mt-1 whitespace-nowrap">USŁUGI INŻYNIERYJNO-BUDOWLANE</span>
+                        <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-brand-900 block leading-none group-hover:text-sky-600 transition-colors">WERTOR</span>
+                        <span class="text-[9px] sm:text-[10.5px] uppercase tracking-wider text-brand-800/70 font-bold block mt-1 whitespace-nowrap">Biuro Projektów Budowlanych</span>
                     </div>
                 </a>
 
                 <!-- DESKTOP NAVIGATION LINKS -->
                 <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase font-bold tracking-wider text-brand-800">
-                    <a href="#o-nas" class="hover:text-gold transition-colors py-2">O WERTOR</a>
-                    <a href="#oferta" class="hover:text-gold transition-colors py-2">Oferta</a>
-                    <a href="#proces" class="hover:text-gold transition-colors py-2">Etapy</a>
-                    <a href="#realizacje" class="hover:text-gold transition-colors py-2">Realizacje</a>
-                    <a href="#faq" class="hover:text-gold transition-colors py-2">FAQ</a>
-                    <a href="#kontakt" class="hover:text-gold transition-colors py-2">Kontakt</a>
+                    <a href="#o-nas" class="hover:text-sky-600 transition-colors py-2">O WERTOR</a>
+                    <a href="#oferta" class="hover:text-sky-600 transition-colors py-2">Oferta</a>
+                    <a href="#proces" class="hover:text-sky-600 transition-colors py-2">Etapy</a>
+                    <a href="#realizacje" class="hover:text-sky-600 transition-colors py-2">Realizacje</a>
+                    <a href="#faq" class="hover:text-sky-600 transition-colors py-2">FAQ</a>
+                    <a href="#kontakt" class="hover:text-sky-600 transition-colors py-2">Kontakt</a>
                 </nav>
 
                 <!-- HEADER ACTION BUTTONS -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="tel:+48000000000" class="px-4 py-2.5 text-xs font-bold text-brand-900 hover:text-gold transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-phone text-gold"></i>
-                        <span>+48 726 162 431</span>
+                    <a href="tel:+48000000000" class="px-4 py-2.5 text-xs font-bold text-brand-900 hover:text-sky-600 transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-sky-500"></i>
+                        <span>+48 123 456 789</span>
                     </a>
-                    <button onclick="openConsultationModal()" class="px-5 py-2.5 bg-brand-900 text-white text-xs uppercase font-bold tracking-wider rounded-lg hover:bg-gold transition-colors shadow-sm flex items-center gap-2">
+                    <button onclick="openConsultationModal()" class="px-5 py-2.5 bg-brand-900 text-white text-xs uppercase font-bold tracking-wider rounded-lg hover:bg-sky-600 transition-colors shadow-sm flex items-center gap-2">
                         <i class="fa-regular fa-calendar-check"></i>
                         <span>Darmowa Konsultacja</span>
                     </button>
                 </div>
 
                 <!-- MOBILE MENU TOGGLE -->
-                <button id="mobileMenuBtn" class="lg:hidden text-brand-900 p-2 hover:text-gold focus:outline-none">
+                <button id="mobileMenuBtn" class="lg:hidden text-brand-900 p-2 hover:text-sky-600 focus:outline-none">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -119,19 +119,19 @@
 
         <!-- MOBILE MENU DRAWER -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-brand-200 px-6 py-6 text-xs uppercase font-bold space-y-4 shadow-lg">
-            <a href="#o-nas" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">O WERTOR</a>
-            <a href="#oferta" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Oferta</a>
-            <a href="#proces" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Etapy</a>
-            <a href="#realizacje" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">Realizacje</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-gold">FAQ</a>
-            <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-brand-900 hover:text-gold">Kontakt</a>
+            <a href="#o-nas" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-sky-600">O WERTOR</a>
+            <a href="#oferta" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-sky-600">Oferta</a>
+            <a href="#proces" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-sky-600">Etapy</a>
+            <a href="#realizacje" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-sky-600">Realizacje</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 border-b border-brand-100 text-brand-900 hover:text-sky-600">FAQ</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block py-2 text-brand-900 hover:text-sky-600">Kontakt</a>
             
             <div class="pt-4 space-y-2">
-                <button onclick="toggleMobileMenu(); openConsultationModal();" class="w-full py-3 bg-brand-900 text-white text-xs uppercase font-bold rounded-lg hover:bg-gold transition-colors">
+                <button onclick="toggleMobileMenu(); openConsultationModal();" class="w-full py-3 bg-brand-900 text-white text-xs uppercase font-bold rounded-lg hover:bg-sky-600 transition-colors">
                     Darmowa Konsultacja
                 </button>
                 <a href="tel:+48000000000" class="block w-full py-3 text-center border border-brand-200 rounded-lg text-brand-900 text-xs font-bold">
-                    <i class="fa-solid fa-phone text-gold mr-2"></i> +48 123 456 789
+                    <i class="fa-solid fa-phone text-sky-500 mr-2"></i> +48 123 456 789
                 </a>
             </div>
         </div>
@@ -148,14 +148,14 @@
                     <!-- HERO LEFT TEXT CONTENT -->
                     <div class="lg:col-span-7 space-y-8">
                         
-                        <div class="inline-flex items-center gap-2.5 px-3.5 py-2 bg-gold-light border border-gold/30 rounded-full text-xs font-semibold text-gold-dark">
-                            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-2 bg-sky-50 border border-sky-200 rounded-full text-xs font-semibold text-sky-700">
+                            <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
                             BIURO PROJEKTÓW BUDOWLANYCH &amp; INŻYNIERIA
                         </div>
 
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-900 tracking-tight leading-[1.12]">
                             Nowoczesna Architektura. <br>
-                            <span class="text-gold">Solidna Konstrukcja 2D.</span>
+                            <span class="text-sky-600">Solidna Konstrukcja 2D.</span>
                         </h1>
 
                         <p class="text-brand-800/80 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
@@ -165,21 +165,21 @@
                         <!-- TRUST BADGES GRID -->
                         <div class="grid sm:grid-cols-3 gap-4 pt-2">
                             <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
-                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                <div class="flex items-center gap-2 text-sky-600 font-bold text-base">
                                     <i class="fa-solid fa-drafting-compass"></i> Rysunki CAD
                                 </div>
                                 <div class="text-xs text-brand-800/70 mt-1 font-medium">Czysta dokumentacja 2D</div>
                             </div>
 
                             <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
-                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                <div class="flex items-center gap-2 text-sky-600 font-bold text-base">
                                     <i class="fa-solid fa-calculator"></i> Eurokody
                                 </div>
                                 <div class="text-xs text-brand-800/70 mt-1 font-medium">Obliczenia statyczne</div>
                             </div>
 
                             <div class="p-4 bg-brand-50 border border-brand-200 rounded-xl">
-                                <div class="flex items-center gap-2 text-gold font-bold text-base">
+                                <div class="flex items-center gap-2 text-sky-600 font-bold text-base">
                                     <i class="fa-solid fa-hardhat"></i> Nadzór
                                 </div>
                                 <div class="text-xs text-brand-800/70 mt-1 font-medium">Kontrola wykonawstwa</div>
@@ -188,12 +188,12 @@
 
                         <!-- HERO CTA BUTTONS (FULLY FUNCTIONAL) -->
                         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-                            <a href="#oferta" class="px-8 py-4 bg-brand-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-gold transition-colors text-center shadow-md flex items-center justify-center gap-2">
+                            <a href="#oferta" class="px-8 py-4 bg-brand-900 text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-sky-600 transition-colors text-center shadow-md flex items-center justify-center gap-2">
                                 <span>Przeglądaj Pełną Ofertę</span>
                                 <i class="fa-solid fa-arrow-right text-xs"></i>
                             </a>
                             
-                            <button onclick="openConsultationModal()" class="px-8 py-4 bg-white text-brand-900 border-2 border-brand-900 hover:border-gold hover:text-gold font-bold text-xs uppercase tracking-wider rounded-lg transition-colors text-center flex items-center justify-center gap-2">
+                            <button onclick="openConsultationModal()" class="px-8 py-4 bg-white text-brand-900 border-2 border-brand-900 hover:border-sky-500 hover:text-sky-600 font-bold text-xs uppercase tracking-wider rounded-lg transition-colors text-center flex items-center justify-center gap-2">
                                 <i class="fa-regular fa-comments"></i>
                                 <span>Bezpłatna Konsultacja</span>
                             </button>
@@ -206,7 +206,7 @@
                         <div class="bg-brand-50 border border-brand-200 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6">
                             
                             <div class="flex justify-between items-center border-b border-brand-200 pb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-gold-dark flex items-center gap-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-sky-700 flex items-center gap-2">
                                     <i class="fa-solid fa-square-poll-vertical"></i> SPECYFIKACJA DOKUMENTACJI
                                 </span>
                                 <span class="text-[10px] bg-brand-200 font-bold px-2.5 py-1 rounded text-brand-900">STANDARD 2D CAD</span>
@@ -226,12 +226,12 @@
                                     <rect x="48" y="43" width="244" height="124" fill="none" stroke="#64748B" stroke-width="1.5"/>
 
                                     <!-- Inner Partition walls -->
-                                    <line x1="150" y1="43" x2="150" y2="167" stroke="#C59B27" stroke-width="2.5" stroke-dasharray="5 2"/>
-                                    <line x1="150" y1="110" x2="292" y2="110" stroke="#C59B27" stroke-width="2.5"/>
+                                    <line x1="150" y1="43" x2="150" y2="167" stroke="#0EA5E9" stroke-width="2.5" stroke-dasharray="5 2"/>
+                                    <line x1="150" y1="110" x2="292" y2="110" stroke="#0EA5E9" stroke-width="2.5"/>
 
                                     <!-- Door & Window Indication -->
                                     <line x1="80" y1="35" x2="110" y2="35" stroke="#FFF" stroke-width="4"/>
-                                    <line x1="80" y1="35" x2="110" y2="35" stroke="#C59B27" stroke-width="2"/>
+                                    <line x1="80" y1="35" x2="110" y2="35" stroke="#0EA5E9" stroke-width="2"/>
 
                                     <!-- Technical Annotations -->
                                     <text x="70" y="85" font-size="10" font-family="Plus Jakarta Sans" font-weight="bold" fill="#0F172A">STREFA POKOJU</text>
@@ -257,7 +257,7 @@
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-brand-800/60 uppercase">Standard Wykonania:</span>
-                                    <span class="font-bold text-gold-dark">Eurokody &amp; Prawo Budowlane</span>
+                                    <span class="font-bold text-sky-700">Eurokody &amp; Prawo Budowlane</span>
                                 </div>
                             </div>
 
@@ -276,11 +276,11 @@
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
                     
                     <div class="lg:col-span-5 space-y-4">
-                        <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[O BIURZE PROJEKTOWYM]</span>
+                        <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block">[O BIURZE PROJEKTOWYM]</span>
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">
                             Dlaczego Inwestorzy Wybierają Biuro WERTOR?
                         </h2>
-                        <div class="w-16 h-1 bg-gold rounded-full"></div>
+                        <div class="w-16 h-1 bg-sky-500 rounded-full"></div>
                         <p class="text-brand-800/80 text-sm sm:text-base leading-relaxed pt-2 font-normal">
                             Biuro projektów budowlanych <strong class="text-brand-900">WERTOR</strong> powstało w odpowiedzi na potrzebę rynku na rzetelną, jednoznaczną i bezbłędną dokumentację wykonawczą.
                         </p>
@@ -289,7 +289,7 @@
                     <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
                         
                         <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
-                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                            <div class="w-10 h-10 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center text-lg font-bold">
                                 <i class="fa-solid fa-shield-halved"></i>
                             </div>
                             <h3 class="text-base font-bold text-brand-900">Niezawodność i Statyka</h3>
@@ -299,7 +299,7 @@
                         </div>
 
                         <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
-                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                            <div class="w-10 h-10 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center text-lg font-bold">
                                 <i class="fa-solid fa-ruler-combined"></i>
                             </div>
                             <h3 class="text-base font-bold text-brand-900">Czystość Rysunku CAD 2D</h3>
@@ -309,7 +309,7 @@
                         </div>
 
                         <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
-                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                            <div class="w-10 h-10 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center text-lg font-bold">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
                             <h3 class="text-base font-bold text-brand-900">Terminowość Prac</h3>
@@ -319,7 +319,7 @@
                         </div>
 
                         <div class="bg-white p-6 rounded-xl border border-brand-200 card-hover space-y-3">
-                            <div class="w-10 h-10 bg-gold-light text-gold-dark rounded-lg flex items-center justify-center text-lg font-bold">
+                            <div class="w-10 h-10 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center text-lg font-bold">
                                 <i class="fa-solid fa-clipboard-check"></i>
                             </div>
                             <h3 class="text-base font-bold text-brand-900">Nadzór nad Realizacją</h3>
@@ -340,7 +340,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[ZAKRES USŁUG PROJEKTOWYCH]</span>
+                    <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block">[ZAKRES USŁUG PROJEKTOWYCH]</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Kompleksowa Oferta Biura WERTOR</h2>
                     <p class="text-brand-800/70 text-sm">
                         Poznaj główne obszary naszej specjalizacji. Każdy projekt dopasowujemy indywidualnie do potrzeb inwestycji.
@@ -353,7 +353,7 @@
                     <!-- SERVICE CARD 1 -->
                     <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                            <div class="w-12 h-12 bg-brand-900 text-sky-400 rounded-xl flex items-center justify-center text-xl shadow-sm">
                                 <i class="fa-solid fa-house-chimney"></i>
                             </div>
                             <h3 class="text-xl font-bold text-brand-900">Projekty Budynków Mieszkalnych</h3>
@@ -362,15 +362,15 @@
                             </p>
                             
                             <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rzuty kondygnacji CAD 2D</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Przekroje architektoniczne</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Zestawienia stolarki okiennej</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Bilans powierzchni użytkowej</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Rzuty kondygnacji CAD 2D</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Przekroje architektoniczne</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Zestawienia stolarki okiennej</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Bilans powierzchni użytkowej</li>
                             </ul>
                         </div>
 
                         <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
-                        <button onclick="scrollToService('mieszkalne')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <button onclick="scrollToService('mieszkalne')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-sky-500 hover:text-sky-600 text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
                             <span>Zapytaj o tę usługę</span>
                             <i class="fa-solid fa-arrow-down text-[10px]"></i>
                         </button>
@@ -379,7 +379,7 @@
                     <!-- SERVICE CARD 2 -->
                     <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                            <div class="w-12 h-12 bg-brand-900 text-sky-400 rounded-xl flex items-center justify-center text-xl shadow-sm">
                                 <i class="fa-solid fa-hammer"></i>
                             </div>
                             <h3 class="text-xl font-bold text-brand-900">Adaptacje i Przebudowy</h3>
@@ -388,15 +388,15 @@
                             </p>
 
                             <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Projekty wyburzeń i otworów</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Nadproża i podciągi stalowe</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Adaptacje poddaszy użytkowych</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Weryfikacja stanu konstrukcji</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Projekty wyburzeń i otworów</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Nadproża i podciągi stalowe</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Adaptacje poddaszy użytkowych</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Weryfikacja stanu konstrukcji</li>
                             </ul>
                         </div>
 
                         <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
-                        <button onclick="scrollToService('adaptacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <button onclick="scrollToService('adaptacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-sky-500 hover:text-sky-600 text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
                             <span>Zapytaj o tę usługę</span>
                             <i class="fa-solid fa-arrow-down text-[10px]"></i>
                         </button>
@@ -405,7 +405,7 @@
                     <!-- SERVICE CARD 3 -->
                     <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                            <div class="w-12 h-12 bg-brand-900 text-sky-400 rounded-xl flex items-center justify-center text-xl shadow-sm">
                                 <i class="fa-solid fa-calculator"></i>
                             </div>
                             <h3 class="text-xl font-bold text-brand-900">Projekty Konstrukcyjne</h3>
@@ -414,15 +414,15 @@
                             </p>
 
                             <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rysunki zbrojeniowe płyt i belek</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Zestawienie stali zbrojeniowej</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Konstrukcje dachu / więźba</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Fundamentowanie i palaż</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Rysunki zbrojeniowe płyt i belek</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Zestawienie stali zbrojeniowej</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Konstrukcje dachu / więźba</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Fundamentowanie i palaż</li>
                             </ul>
                         </div>
 
                         <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
-                        <button onclick="scrollToService('konstrukcje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <button onclick="scrollToService('konstrukcje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-sky-500 hover:text-sky-600 text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
                             <span>Zapytaj o tę usługę</span>
                             <i class="fa-solid fa-arrow-down text-[10px]"></i>
                         </button>
@@ -431,7 +431,7 @@
                     <!-- SERVICE CARD 4 -->
                     <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 flex flex-col justify-between card-hover space-y-6">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 bg-brand-900 text-gold rounded-xl flex items-center justify-center text-xl shadow-sm">
+                            <div class="w-12 h-12 bg-brand-900 text-sky-400 rounded-xl flex items-center justify-center text-xl shadow-sm">
                                 <i class="fa-solid fa-compass-drafting"></i>
                             </div>
                             <h3 class="text-xl font-bold text-brand-900">Inwentaryzacje &amp; Nadzór</h3>
@@ -440,15 +440,15 @@
                             </p>
 
                             <ul class="text-xs text-brand-900 space-y-2 pt-2 border-t border-brand-200 font-medium">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Pomiary laserowe budynków</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Rysunki stanu istniejącego 2D</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Kontrola montażu zbrojenia</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold text-[10px]"></i> Odbiory elementów nośnych</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Pomiary laserowe budynków</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Rysunki stanu istniejącego 2D</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Kontrola montażu zbrojenia</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500 text-[10px]"></i> Odbiory elementów nośnych</li>
                             </ul>
                         </div>
 
                         <!-- WORKING BUTTON: SCROLLS TO CONTACT & PRESETS DROPDOWN -->
-                        <button onclick="scrollToService('inwentaryzacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-gold hover:text-gold text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <button onclick="scrollToService('inwentaryzacje')" class="w-full py-3 bg-white text-brand-900 border border-brand-200 hover:border-sky-500 hover:text-sky-600 text-xs uppercase font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm">
                             <span>Zapytaj o tę usługę</span>
                             <i class="fa-solid fa-arrow-down text-[10px]"></i>
                         </button>
@@ -464,21 +464,19 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[KROK PO KROKU]</span>
+                    <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block">[KROK PO KROKU]</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Przebieg Pracy w Biurze WERTOR</h2>
                     <p class="text-brand-800/70 text-sm">
                         Przejrzysty i uporządkowany proces współpracy od pierwszego zapytania po przekazanie dokumentacji.
                     </p>
                 </div>
-        <!-- SEKCJA: REALIZACJE -->
-        <section id="realizacje" class="py-20 bg-white border-b border-brand-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block mb-1">[PORTFOLIO OPRACOWAŃ]</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Wybrane Projekty Biura wertor</h2>
-                    </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
+                        <div class="w-10 h-10 bg-brand-900 text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                            01
+                        </div>
                         <h3 class="text-lg font-bold text-brand-900">Konsultacja i Pomiary</h3>
                         <p class="text-xs text-brand-800/70 leading-relaxed font-normal">
                             Omówienie założeń z Inwestorem, analiza działki lub wykonanie inwentaryzacji pomiarowej z natury.
@@ -506,7 +504,7 @@
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl border border-brand-200 shadow-sm relative space-y-4">
-                        <div class="w-10 h-10 bg-gold text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
+                        <div class="w-10 h-10 bg-sky-500 text-white font-extrabold text-sm rounded-lg flex items-center justify-center">
                             04
                         </div>
                         <h3 class="text-lg font-bold text-brand-900">Odbiór Dokumentacji</h3>
@@ -526,16 +524,16 @@
                 
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block mb-1">[PORTFOLIO OPRACOWAŃ]</span>
+                        <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block mb-1">[PORTFOLIO OPRACOWAŃ]</span>
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Wybrane Projekty Biura WERTOR</h2>
                     </div>
 
                     <!-- Filter Buttons -->
                     <div class="flex flex-wrap gap-2 text-xs font-bold uppercase">
                         <button onclick="filterPortfolio('all')" class="port-btn active px-4 py-2.5 bg-brand-900 text-white rounded-lg shadow-sm" data-category="all">Wszystkie</button>
-                        <button onclick="filterPortfolio('mieszkalne')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="mieszkalne">Mieszkalne</button>
-                        <button onclick="filterPortfolio('uslugowe')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="uslugowe">Usługowe</button>
-                        <button onclick="filterPortfolio('adaptacje')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-gold rounded-lg" data-category="adaptacje">Adaptacje</button>
+                        <button onclick="filterPortfolio('mieszkalne')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-sky-500 rounded-lg" data-category="mieszkalne">Mieszkalne</button>
+                        <button onclick="filterPortfolio('uslugowe')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-sky-500 rounded-lg" data-category="uslugowe">Usługowe</button>
+                        <button onclick="filterPortfolio('adaptacje')" class="port-btn px-4 py-2.5 bg-brand-50 text-brand-900 border border-brand-200 hover:border-sky-500 rounded-lg" data-category="adaptacje">Adaptacje</button>
                     </div>
                 </div>
 
@@ -544,7 +542,7 @@
                     
                     <!-- ITEM 1 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="mieszkalne">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-01</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
                         </div>
@@ -552,7 +550,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 1</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 195 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 1', 'Opis projektu nr 1', '195 m²', 'Żelbet &amp; Pustak Ceramiczny', 'Budownictwo Mieszkalne')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 1', 'Opis projektu nr 1', '195 m²', 'Żelbet &amp; Pustak Ceramiczny', 'Budownictwo Mieszkalne')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -561,7 +559,7 @@
 
                     <!-- ITEM 2 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="uslugowe">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-02</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">STATYKA</span>
                         </div>
@@ -569,7 +567,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 2</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 650 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 2', 'Opis projektu nr 2', '650 m²', 'Konstrukcja Stalowa', 'Obiekty Usługowe')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 2', 'Opis projektu nr 2', '650 m²', 'Konstrukcja Stalowa', 'Obiekty Usługowe')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -578,7 +576,7 @@
 
                     <!-- ITEM 3 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="adaptacje">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-03</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">INWENTARYZACJA</span>
                         </div>
@@ -586,7 +584,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 3</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 280 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 3', 'Opis projektu nr 3', '280 m²', 'Konstrukcja Tradycyjna Murowana', 'Adaptacje')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 3', 'Opis projektu nr 3', '280 m²', 'Konstrukcja Tradycyjna Murowana', 'Adaptacje')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -595,7 +593,7 @@
 
                     <!-- ITEM 4 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="mieszkalne">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-04</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
                         </div>
@@ -603,7 +601,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 4</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 260 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 4', 'Opis projektu nr 4', '260 m²', 'Silikat &amp; Żelbet', 'Budownictwo Mieszkalne')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 4', 'Opis projektu nr 4', '260 m²', 'Silikat &amp; Żelbet', 'Budownictwo Mieszkalne')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -612,7 +610,7 @@
 
                     <!-- ITEM 5 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="adaptacje">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-05</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">PRZEBUDOWA</span>
                         </div>
@@ -620,7 +618,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 5</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 110 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 5', 'Opis projektu nr 5', '110 m²', 'Profil Stalowy HEB', 'Adaptacje')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 5', 'Opis projektu nr 5', '110 m²', 'Profil Stalowy HEB', 'Adaptacje')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -629,7 +627,7 @@
 
                     <!-- ITEM 6 -->
                     <div class="port-card bg-brand-50 border border-brand-200 rounded-2xl p-6 space-y-4 card-hover" data-cat="uslugowe">
-                        <div class="flex justify-between items-center text-xs font-bold text-gold-dark border-b border-brand-200 pb-3">
+                        <div class="flex justify-between items-center text-xs font-bold text-sky-700 border-b border-brand-200 pb-3">
                             <span>PROJEKT #2026-06</span>
                             <span class="bg-white border border-brand-200 px-2.5 py-1 rounded text-brand-900 text-[10px]">2D CAD</span>
                         </div>
@@ -637,7 +635,7 @@
                         <p class="text-xs text-brand-800/70 leading-relaxed">Opis projektu nr 6</p>
                         <div class="pt-4 border-t border-brand-200 flex justify-between items-center text-xs">
                             <span class="font-semibold text-brand-800">POW: 310 m²</span>
-                            <button onclick="openProjectModal('Projekt nr 6', 'Opis projektu nr 6', '310 m²', 'Szkło, Stal &amp; Gazobeton', 'Obiekty Usługowe')" class="text-gold-dark font-bold hover:underline flex items-center gap-1">
+                            <button onclick="openProjectModal('Projekt nr 6', 'Opis projektu nr 6', '310 m²', 'Szkło, Stal &amp; Gazobeton', 'Obiekty Usługowe')" class="text-sky-600 font-bold hover:underline flex items-center gap-1">
                                 <span>Karta Techniczna</span>
                                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
                             </button>
@@ -654,7 +652,7 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center mb-12 space-y-3">
-                    <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block">[FAQ]</span>
+                    <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block">[FAQ]</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Najczęstsze Pytania Inwestorów</h2>
                 </div>
 
@@ -664,7 +662,7 @@
                     <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq1')">
                         <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
                             <span>W jakich formatach otrzymam gotowy projekt od Biura WERTOR?</span>
-                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq1-icon"></i>
+                            <i class="fa-solid fa-chevron-down text-sky-500 text-sm transition-transform duration-200" id="faq1-icon"></i>
                         </div>
                         <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq1-text">
                             Projekt przekazujemy w pełnej wersji cyfrowej (pliki PDF zoptymalizowane pod druk oraz pliki wektorowe CAD DWG/DXF), a także na życzenie w formie oprawionych drukowanych egzemplarzy papierowych.
@@ -675,21 +673,10 @@
                     <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq2')">
                         <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
                             <span>Czy biuro WERTOR wykonuje projekty konstrukcji i przeliczenia statyczne?</span>
-                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq2-icon"></i>
+                            <i class="fa-solid fa-chevron-down text-sky-500 text-sm transition-transform duration-200" id="faq2-icon"></i>
                         </div>
                         <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq2-text">
                             Tak. Konstrukcja i obliczenia statyczne (stropy żelbetowe, nadproża, podciągi, dach) stanowią naszą kluczową specjalizację. Wszystkie wyliczenia wykonujemy zgodnie z aktualnymi Eurokodami.
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq2')">
-                        <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
-                            <span>Czy biuro wertor wykonuje projekty konstrukcji i przeliczenia statyczne?</span>
-                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq2-icon"></i>
-                        </div>
-                        <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq2-text">
-                            Tak. Konstrukcja i obliczenia statyczne (strope żelbetowe, nadproża, podciągi, dach) stanowią naszą kluczową specjalizację. Wszystkie wyliczenia wykonujemy zgodnie z aktualnymi Eurokodami.
                         </div>
                     </div>
 
@@ -697,7 +684,7 @@
                     <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq3')">
                         <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
                             <span>Na czym polega nadzór autorski inżyniera na placu budowy?</span>
-                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq3-icon"></i>
+                            <i class="fa-solid fa-chevron-down text-sky-500 text-sm transition-transform duration-200" id="faq3-icon"></i>
                         </div>
                         <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq3-text">
                             Nadzór autorski polega na kontrolnych przyjazdach inżyniera projektanta na budowę przed kluczowymi pracami (np. przed betonowaniem stropu). Weryfikujemy układ zbrojenia i zgodność wykonawstwa z dokumentacją.
@@ -708,7 +695,7 @@
                     <div class="bg-white border border-brand-200 rounded-xl p-5 cursor-pointer shadow-sm transition-colors" onclick="toggleFaq('faq4')">
                         <div class="flex justify-between items-center font-bold text-sm sm:text-base text-brand-900">
                             <span>Jakie dokumenty są potrzebne do wyceny projektu?</span>
-                            <i class="fa-solid fa-chevron-down text-gold text-sm transition-transform duration-200" id="faq4-icon"></i>
+                            <i class="fa-solid fa-chevron-down text-sky-500 text-sm transition-transform duration-200" id="faq4-icon"></i>
                         </div>
                         <div class="hidden pt-3 text-xs text-brand-800/70 leading-relaxed font-normal border-t border-brand-100 mt-3" id="faq4-text">
                             Do bezpłatnej wyceny wstępnej wystarczą podstawowe informacje: metraż planowanego obiektu, preferowana funkcja oraz lokalizacja. W przypadku adaptacji lub inwentaryzacji przydatne będą zdjęcia stanu obecnego.
@@ -729,7 +716,7 @@
                     <!-- LEFT COLUMN: DIRECT CONTACT DETAILS -->
                     <div class="lg:col-span-5 space-y-8">
                         <div>
-                            <span class="text-gold-dark text-xs uppercase tracking-widest font-bold block mb-1">[FORMULARZ &amp; DANE]</span>
+                            <span class="text-sky-700 text-xs uppercase tracking-widest font-bold block mb-1">[FORMULARZ &amp; DANE]</span>
                             <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 tracking-tight">Skontaktuj się z WERTOR</h2>
                             <p class="text-brand-800/70 text-sm mt-3 leading-relaxed">
                                 Masz pytania dotyczące projektu lub inwentaryzacji? Zadzwoń do nas bezpośrednio lub wypełnij formularz kontaktowy.
@@ -738,24 +725,24 @@
 
                         <div class="space-y-4 text-xs font-semibold">
                             
-                            <a href="tel:+48726162431" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-gold transition-colors space-y-1">
+                            <a href="tel:+48000000000" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-sky-500 transition-colors space-y-1">
                                 <span class="text-brand-800/60 uppercase text-[10px] block">BEZPOŚREDNI TELEFON DO BIURA:</span>
                                 <span class="text-lg font-bold text-brand-900 flex items-center gap-2">
-                                    <i class="fa-solid fa-phone text-gold"></i> +48 726162431
+                                    <i class="fa-solid fa-phone text-sky-500"></i> +48 123 456 789
                                 </span>
                             </a>
 
-                            <a href="mailto:biuro@wertor.pl" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-gold transition-colors space-y-1">
+                            <a href="mailto:kontakt@wertor.pl" class="block p-5 bg-brand-50 border border-brand-200 rounded-xl hover:border-sky-500 transition-colors space-y-1">
                                 <span class="text-brand-800/60 uppercase text-[10px] block">ADRES POCZTY E-MAIL:</span>
                                 <span class="text-base font-bold text-brand-900 flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-gold"></i> biuro@wertor.pl
+                                    <i class="fa-solid fa-envelope text-sky-500"></i> kontakt@wertor.pl
                                 </span>
                             </a>
 
                             <div class="p-5 bg-brand-50 border border-brand-200 rounded-xl space-y-1">
                                 <span class="text-brand-800/60 uppercase text-[10px] block">GODZINY PRACY BIURA WERTOR:</span>
                                 <span class="text-sm font-bold text-brand-900 flex items-center gap-2">
-                                    <i class="fa-regular fa-clock text-gold"></i> Poniedziałek – Piątek: 08:00 – 17:00
+                                    <i class="fa-regular fa-clock text-sky-500"></i> Poniedziałek – Piątek: 08:00 – 17:00
                                 </span>
                             </div>
 
@@ -775,22 +762,22 @@
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-brand-900 mb-1">Imię i Nazwisko / Firma *</label>
-                                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-sky-500 focus:outline-none transition-colors">
                                 </div>
                                 <div>
                                     <label class="block text-brand-900 mb-1">Numer Telefonu *</label>
-                                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-sky-500 focus:outline-none transition-colors">
                                 </div>
                             </div>
 
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-brand-900 mb-1">Adres E-mail *</label>
-                                    <input type="email" required placeholder="jan@domena.pl" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                    <input type="email" required placeholder="jan@domena.pl" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-sky-500 focus:outline-none transition-colors">
                                 </div>
                                 <div>
                                     <label class="block text-brand-900 mb-1">Wybrana Usługa</label>
-                                    <select id="uslugaSelect" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors">
+                                    <select id="uslugaSelect" class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-sky-500 focus:outline-none transition-colors">
                                         <option value="mieszkalne">Projekty Budynków Mieszkalnych</option>
                                         <option value="adaptacje">Adaptacje i Przebudowy</option>
                                         <option value="konstrukcje">Projekty Konstrukcyjne i Statyka</option>
@@ -801,22 +788,22 @@
 
                             <div>
                                 <label class="block text-brand-900 mb-1">Opis Zamierzenia Budowlanego *</label>
-                                <textarea required rows="4" placeholder="Podaj lokalizację, powierzchnię w m² oraz krótki opis inwestycji..." class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-gold focus:outline-none transition-colors"></textarea>
+                                <textarea required rows="4" placeholder="Podaj lokalizację, powierzchnię w m² oraz krótki opis inwestycji..." class="w-full px-4 py-3 bg-white border border-brand-200 rounded-lg text-brand-900 text-xs focus:border-sky-500 focus:outline-none transition-colors"></textarea>
                             </div>
 
                             <!-- FILE ATTACHMENT WITH PREVIEW -->
                             <div>
                                 <label class="block text-brand-900 mb-1">Plik / Rzut Działki / Zdjęcia (Opcjonalnie)</label>
-                                <div class="border border-dashed border-brand-200 bg-white rounded-lg p-4 text-center cursor-pointer hover:border-gold transition-colors">
+                                <div class="border border-dashed border-brand-200 bg-white rounded-lg p-4 text-center cursor-pointer hover:border-sky-500 transition-colors">
                                     <input type="file" id="contactFileInput" class="hidden" onchange="handleFileChange(this, 'filePreviewText')">
                                     <label for="contactFileInput" class="cursor-pointer text-xs text-brand-800/70 flex items-center justify-center gap-2">
-                                        <i class="fa-solid fa-paperclip text-gold"></i>
+                                        <i class="fa-solid fa-paperclip text-sky-500"></i>
                                         <span id="filePreviewText">Kliknij, aby dołączyć plik (PDF, DWG, JPG - max 15MB)</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <button type="submit" class="w-full py-4 bg-brand-900 text-white font-bold uppercase text-xs rounded-lg hover:bg-gold transition-colors shadow-md tracking-wider">
+                            <button type="submit" class="w-full py-4 bg-brand-900 text-white font-bold uppercase text-xs rounded-lg hover:bg-sky-600 transition-colors shadow-md tracking-wider">
                                 Wyślij Zapytanie do Biura WERTOR &rarr;
                             </button>
 
@@ -837,7 +824,7 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-brand-800">
                 
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-gold text-brand-900 rounded-xl flex items-center justify-center shadow-sm">
+                    <div class="w-10 h-10 bg-sky-500 text-brand-900 rounded-xl flex items-center justify-center shadow-sm">
                         <svg class="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 6l4.5 12L12 9l4.5 9L21 6"/>
                         </svg>
@@ -849,12 +836,12 @@
                 </div>
 
                 <div class="flex flex-wrap gap-6 text-xs uppercase font-bold text-brand-200/80">
-                    <a href="#o-nas" class="hover:text-gold transition-colors">O WERTOR</a>
-                    <a href="#oferta" class="hover:text-gold transition-colors">Oferta</a>
-                    <a href="#proces" class="hover:text-gold transition-colors">Etapy</a>
-                    <a href="#realizacje" class="hover:text-gold transition-colors">Realizacje</a>
-                    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
-                    <a href="#kontakt" class="hover:text-gold transition-colors">Kontakt</a>
+                    <a href="#o-nas" class="hover:text-sky-400 transition-colors">O WERTOR</a>
+                    <a href="#oferta" class="hover:text-sky-400 transition-colors">Oferta</a>
+                    <a href="#proces" class="hover:text-sky-400 transition-colors">Etapy</a>
+                    <a href="#realizacje" class="hover:text-sky-400 transition-colors">Realizacje</a>
+                    <a href="#faq" class="hover:text-sky-400 transition-colors">FAQ</a>
+                    <a href="#kontakt" class="hover:text-sky-400 transition-colors">Kontakt</a>
                 </div>
 
             </div>
@@ -883,17 +870,17 @@
             <form onsubmit="handleConsultationSubmit(event)" class="space-y-4 text-xs font-semibold">
                 <div>
                     <label class="block text-brand-900 mb-1">Imię i Nazwisko *</label>
-                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                    <input type="text" required placeholder="Jan Kowalski" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div>
                     <label class="block text-brand-900 mb-1">Numer Telefonu *</label>
-                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                    <input type="tel" required placeholder="+48 600 000 000" class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div>
                     <label class="block text-brand-900 mb-1">Temat Konsultacji</label>
-                    <select class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-gold focus:outline-none">
+                    <select class="w-full px-4 py-3 bg-brand-50 border border-brand-200 rounded-lg text-brand-900 focus:border-sky-500 focus:outline-none">
                         <option>Projekt Budynku Mieszkalnego</option>
                         <option>Przebudowa / Wyburzenie Ściany</option>
                         <option>Obliczenia Konstrukcyjne / Statyka</option>
@@ -903,7 +890,7 @@
 
                 <div class="flex justify-end gap-3 pt-2">
                     <button type="button" onclick="closeModal('consultationModal')" class="px-5 py-3 border border-brand-200 rounded-lg text-brand-900 font-bold">Anuluj</button>
-                    <button type="submit" class="px-6 py-3 bg-brand-900 text-white rounded-lg font-bold uppercase hover:bg-gold transition-colors">Zamów Rozmowę</button>
+                    <button type="submit" class="px-6 py-3 bg-brand-900 text-white rounded-lg font-bold uppercase hover:bg-sky-600 transition-colors">Zamów Rozmowę</button>
                 </div>
             </form>
         </div>
@@ -913,7 +900,7 @@
     <div id="projectModal" class="fixed inset-0 z-50 hidden bg-brand-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white max-w-xl w-full rounded-2xl p-6 sm:p-8 shadow-2xl space-y-5">
             <div class="flex justify-between items-center border-b border-brand-200 pb-4">
-                <span class="text-xs font-bold text-gold-dark uppercase tracking-wider">[KARTA SPECYFIKACJI PROJECTU]</span>
+                <span class="text-xs font-bold text-sky-700 uppercase tracking-wider">[KARTA SPECYFIKACJI PROJECTU]</span>
                 <button onclick="closeModal('projectModal')" class="text-brand-800/60 hover:text-brand-900 text-xl">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -935,14 +922,14 @@
 
             <div class="flex justify-end gap-3 pt-2">
                 <button onclick="closeModal('projectModal')" class="px-5 py-2.5 border border-brand-200 rounded-lg text-brand-900 text-xs font-bold">Zamknij</button>
-                <button onclick="closeModal('projectModal'); scrollToService('mieszkalne');" class="px-6 py-2.5 bg-brand-900 text-white text-xs font-bold uppercase rounded-lg hover:bg-gold transition-colors">Zapytaj o Podobny Projekt</button>
+                <button onclick="closeModal('projectModal'); scrollToService('mieszkalne');" class="px-6 py-2.5 bg-brand-900 text-white text-xs font-bold uppercase rounded-lg hover:bg-sky-600 transition-colors">Zapytaj o Podobny Projekt</button>
             </div>
         </div>
     </div>
 
     <!-- TOAST NOTIFICATION -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-900 text-white p-5 rounded-xl shadow-2xl text-xs max-w-xs flex items-center gap-3 border border-gold">
-        <i class="fa-solid fa-circle-check text-gold text-2xl"></i>
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-900 text-white p-5 rounded-xl shadow-2xl text-xs max-w-xs flex items-center gap-3 border border-sky-400">
+        <i class="fa-solid fa-circle-check text-sky-400 text-2xl"></i>
         <span>Dziękujemy! Formularz został wysłany. Biuro WERTOR skontaktuje się z Tobą.</span>
     </div>
 
@@ -961,8 +948,8 @@
             if (select) {
                 select.value = serviceValue;
                 // Add highlight ring to visual feedback
-                select.classList.add('ring-2', 'ring-gold');
-                setTimeout(() => select.classList.remove('ring-2', 'ring-gold'), 2000);
+                select.classList.add('ring-2', 'ring-sky-400');
+                setTimeout(() => select.classList.remove('ring-2', 'ring-sky-400'), 2000);
             }
             
             const contactSection = document.getElementById('kontakt');
